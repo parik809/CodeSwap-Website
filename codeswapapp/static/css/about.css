@@ -1,0 +1,43 @@
+/* styles.css */
+
+#about {
+    background-color: #1b1b1b;
+    color: #fff;
+    padding: 50px 0;
+  }
+  
+  .content-about {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  
+  .about-p {
+    font-size: 18px;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 90%;
+  margin: 0 auto; 
+  background-color: #222;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 28px;
+    }
+  
+    .about-p {
+      font-size: 16px;
+    }
+  }
+  

@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Swap Solutions</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer-contact.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/products.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About Us</a></li>
+          <li><a href="{% url 'products' %}">Products</a></li>
+          <li><a href="{% url 'contact' %}">Contact Us</a></li>
+      </ul>
+      <div class="logo">
+        <a href="{% url 'home' %}"><img src="{% static 'images/CodeSwap_Logo.png' %}" alt="Logo"></a>
+      </div>
+  </nav>
+
+    <div class="slider" id="image-slider" style="height: 400px">
+      <div class="slide"><img src="{% static 'images/img1.png' %}" alt="Logo"/></div>
+      <div class="slide"><img src="{% static 'images/img2.gif' %}" alt="Logo"/></div>
+      <div class="slide"><img src="{% static 'images/img3.gif' %}" alt="Logo"/></div>
+      <div class="slide"><img src="{% static 'images/img4.png' %}" alt="Logo"/></div>
+      <div class="slide"><img src="{% static 'images/img5.jpg' %}" alt="Logo"/></div>
+      <div class="slide"><img src="{% static 'images/img6.png' %}" alt="Logo"/></div>  
+    </div>
+
+    <div class="content">{% block content %}{% endblock %}</div>
+    {% include 'footer.html' %}
+    <script src="{% static 'js/main.js' %}"></script>
+    <script>
+      // JavaScript code to handle hiding/showing the navigation bar
+      const footer = document.querySelector('.footer');
+      const nav = document.querySelector('nav');
+      let isFooterVisible = false;
+  
+      // Function to check if the footer is in the viewport
+      function isElementInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+      }
+  
+      // Function to handle hiding/showing the navigation bar
+      function handleNavVisibility() {
+        if (isElementInViewport(footer)) {
+          if (!isFooterVisible) {
+            nav.style.display = 'none';
+            isFooterVisible = true;
+          }
+        } else {
+          if (isFooterVisible) {
+            nav.style.display = 'flex';
+            isFooterVisible = false;
+          }
+        }
+      }
+  
+      // Call the function on page load and on scroll
+      document.addEventListener('DOMContentLoaded', handleNavVisibility);
+      window.addEventListener('scroll', handleNavVisibility);
+    </script>
+  </body>
+</html>
