@@ -1,0 +1,166 @@
+/* products.css */
+
+/* Default styles for products and inquiry form */
+.pr-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heading {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .product {
+    width: 700px;
+    margin: 20px;
+  }
+  
+  .product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .product-info {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+  }
+  
+  .product-info:hover {
+    background-color: #333; /* Darken on hover */
+  }
+  
+  .description h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .review-stars {
+    color: #f4d32e;
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  
+  .description p {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 5px;
+  }
+  
+  .inquiry-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 50px auto 25px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .inquiry-form h2 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .form-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .form-details label {
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  .form-details input[type="text"],
+  .form-details input[type="tel"],
+  .form-details input[type="email"],
+  .form-details textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .form-details textarea {
+    resize: vertical;
+  }
+  
+  button[type="submit"] {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #08a91b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0bc821;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .product {
+      width: 90%;
+      max-width: 400px;
+    }
+  
+    .inquiry-form {
+      width: 90%;
+      max-width: 400px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .description h2 {
+      font-size: 20px;
+    }
+  
+    .review-stars {
+      font-size: 24px;
+    }
+  
+    .description p {
+      font-size: 14px;
+    }
+  
+    .form-details label {
+      font-size: 14px;
+    }
+  
+    .form-details input[type="text"],
+    .form-details input[type="email"],
+    .form-details input[type="tel"],
+    .form-details textarea {
+      font-size: 12px;
+    }
+  
+    button[type="submit"] {
+      font-size: 14px;
+    }
+  }
+  

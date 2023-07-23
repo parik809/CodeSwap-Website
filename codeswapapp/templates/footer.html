@@ -1,0 +1,32 @@
+{% load static %}
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="{% static 'images/CodeSwap_Logo.png' %}" width="150px" height="auto" alt="Logo" />
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About Us</a></li>
+          <li><a href="{% url 'products' %}">Products</a></li>
+          <li><a href="{% url 'contact' %}">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/codeswap-solutions-pvt-ltd/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <div class="footer-contact-info">
+      <ul>
+        <li><i class="fas fa-envelope"></i> Email: info@codeswapsolutions.com</li>
+        <li><i class="fas fa-map-marker-alt"></i> Address: Office Address-8-4-390/1/101 Premnagar, Erragadda, Hyderabad 500018</li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Code Swap Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+  

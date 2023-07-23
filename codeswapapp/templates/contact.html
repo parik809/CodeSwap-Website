@@ -1,0 +1,42 @@
+<!-- contact.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="contact" class="section">
+    <div class="content">
+        <h2 class="Heading">Contact Us</h2>
+        <p class="subheading">Feel free to get in touch with us:</p>
+        <form method="post" action="{% url 'contact' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="query">Query:</label>
+                <textarea id="query" name="query" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" onclick="showSuccessAlert()">Submit</button>
+        </form>
+    </div>
+</section>
+<script>
+    function showSuccessAlert() {
+        alert('Your query has reached us!');
+    }
+</script>
+
+
+{% endblock %}

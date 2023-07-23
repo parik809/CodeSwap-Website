@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- products.html -->
+<section id="products" class="section">
+    <div class="pr-content">
+        <div><h1 class="heading">Our Products</h1></div>
+        <div class="product">
+            <div class="product-info">
+                <img src="{% static 'images/Attendance2.png' %}" alt="Attendance Image">
+                <div class="description">
+                    <h2>Attendance Managemant</h2>
+                    <div class="review-stars">
+                        <span class="star">★★★★★</span>
+                    </div>
+                    <p>Category: Financial Consultancy / Accounting Services</p>
+                    <p>Price: On Request</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="{% static 'images/payroll2.jpg' %}" alt="Payroll Image">
+                <div class="description">
+                    <h2>Payroll Services</h2>
+                    <div class="review-stars">
+                        <span class="star">★★★★★</span>
+                    </div>
+                    <p>Category: Financial Consultancy / Accounting Services</p>
+                    <p>Price: On Request</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Product Inquiry Form -->
+    <div class="inquiry-form">
+        <h2>Product Inquiry</h2>
+        <form method="post" action="{% url 'products' %}">
+            {% csrf_token %}
+            <div class="form-details">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-details">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-details">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" onclick="showSuccessAlert()">Submit</button>
+        </form>
+    </div>
+</section>
+<script>
+    function showSuccessAlert() {
+        alert('Your query has reached us!');
+    }
+</script>
+
+{% endblock %}

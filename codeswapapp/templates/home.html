@@ -1,0 +1,19 @@
+<!-- home.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section id="home" class="section">
+    <div class="content-collage">
+        <h1>Welcome to Code Swap Solutions</h1>
+        <div class="collage" id="image-collage">
+            <div class="collage"><img src="{% static 'images/Attendance.jpg' %}" alt="Attendance Image"></div>
+            <div class="collage"><img src="{% static 'images/CostReduce.jpg' %}" alt="Cost Reduce Image"></div>
+            <div class="collage"><img src="{% static 'images/Finance.jpg' %}" alt="Finance Image"></div>
+            <div class="collage"><img src="{% static 'images/Idea.jpg' %}" alt="Idea Image"></div>
+            <div class="collage"><img src="{% static 'images/Interact.jpg' %}" alt="Interact Image"></div>
+            <div class="collage"><img src="{% static 'images/Payroll.jpg' %}" alt="Payroll Image"></div>  
+        </div>
+    </div>
+</section>
+{% endblock %}
